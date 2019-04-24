@@ -1,0 +1,26 @@
+1. SELECT studentid, classname, grade
+from Courses
+inner join Classes
+on Courses.ClassCode = Classes.ClassCode
+
+2. SELECT StudentName
+from Students
+where Status like 'G'
+
+4. select studentname, avg(grade)
+from Students
+inner join Classes
+on Students.studentid = Classes.studentid
+group by Classes.StudentId
+order by avg(grade) desc
+
+6. select professorname, tenure, classname
+from Professors
+inner join Courses
+on Professors.FacultyId = Courses.Professor
+order by department
+
+7. select ClassName, Description, ProfessorName
+from Courses
+inner join Professors
+on Professors.FacultyId = Courses.Professor
